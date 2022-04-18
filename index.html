@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -12,26 +23,36 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="css/style.css" />
+
     <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <main>
+    <header>
       <nav class="navbar">
+        <div>
+          <img
+            class="header__image"
+            src="./images/logo.svg"
+            alt="website logo for fylo"
+          />
+        </div>
         <ul class="navbar__navlinks">
           <li class="navbar__navlinks__link">Features</li>
           <li class="navbar__navlinks__link">Team</li>
           <li class="navbar__navlinks__link">Sign In</li>
         </ul>
       </nav>
-
-      <div class="hero">
-        <div class="hero-grid">
-          <h1 class="hero-grid__title">
+    </header>
+    <main>
+      <div class="hero-grid">
+        <div class="hero">
+          <h1 class="hero__title">
             All your files in one secure location, accessible anywhere.
           </h1>
-          <p class="hero-grid__description">
+          <p class="hero__description">
             Fylo stores your most important files in one secure location. Access
             them wherever you need, share and collaborate with friends, family,
             and co-workers.
@@ -51,6 +72,7 @@
       </div>
 
       <div class="container">
+        <img class="hero-image" src="./images/illustration-2.svg" alt="">
         <h1 class="container__title">Stay productive, wherever you are</h1>
         <p class="container__description">
           Never let location be an issue when accessing your files. Fylo has you
@@ -81,20 +103,20 @@
             would be happy to help you.
           </p>
           <div class="button-group">
-            <input type="text" name="" id="" placeholder="email@example.com">
+            <input type="text" name="" id="" placeholder="email@example.com" />
             <a href="">Get Started For Free</a>
           </div>
         </div>
       </div>
       <footer>
         <div>
-          <img src="./images/logo.svg" alt="logo">
+          <img src="./images/logo.svg" alt="logo" />
           <div>
-            <img src="./images/icon-phone.svg" alt="">
+            <img src="./images/icon-phone.svg" alt="" />
             <p>Phone: +1-543-123-4567</p>
           </div>
           <div>
-            <img src="./images/icon-email.svg" alt="">
+            <img src="./images/icon-email.svg" alt="" />
             <p>example@fylo.com</p>
           </div>
         </div>
