@@ -64,7 +64,7 @@
         </div>
         <div>
           <img
-            class="hero-image"
+            class="hero__image"
             src="./images/illustration-1.svg"
             alt="hero image"
           />
@@ -72,29 +72,37 @@
       </div>
 
       <div class="container">
-        <img class="section-image" src="./images/illustration-2.svg" alt="">
+        <img class="section-image" src="./images/illustration-2.svg" alt="" />
         <h1 class="container__title">Stay productive, wherever you are</h1>
         <p class="container__description">
           Never let location be an issue when accessing your files. Fylo has you
-          covered for all of your file storage needs. <span>
-            Securely share files and
-            folders with friends, family and colleagues for live collaboration. No
-            email attachments required!
+          covered for all of your file storage needs.
+          <span>
+            Securely share files and folders with friends, family and colleagues
+            for live collaboration. No email attachments required!
           </span>
         </p>
-        <a href="#">See how Fylo works</a>
+        <div class="flex">
+          <a class="container__link" href="#">See how Fylo works</a>
+          <img src="./images/icon-arrow.svg" alt="" />
+        </div>
       </div>
 
       <div class="quote">
+        <img src="./images/icon-quotes.svg" alt="" />
         <p>
           Fylo has improved our team productivity by an order of magnitude.
           Since making the switch our team has become a well-oiled collaboration
           machine.
         </p>
         <div class="flex-author">
-          <img src="./images/avatar-testimonial.jpg" alt="" />
-          <p>Kyle Burton</p>
-          <small>Founder & Ceo, Huddle</small>
+          <div>
+            <img src="./images/avatar-testimonial.jpg" alt="" />
+          </div>
+          <div class="flex-lower">
+            <p>Kyle Burton</p>
+            <small>Founder & Ceo, Huddle</small>
+          </div>
         </div>
 
         <div class="access-container">
@@ -110,14 +118,16 @@
           </div>
         </div>
       </div>
-      <footer>
+      <footer class="footer-container">
         <div>
           <img src="./images/logo.svg" alt="logo" />
-          <div>
-            <img src="./images/icon-phone.svg" alt="" />
-            <p>Phone: +1-543-123-4567</p>
+          <div class="footer-item">
+              <img src="./images/icon-phone.svg" alt="" />
+            <div>
+              <p>Phone: +1-543-123-4567</p>
+            </div>
           </div>
-          <div>
+          <div class="footer-item">
             <img src="./images/icon-email.svg" alt="" />
             <p>example@fylo.com</p>
           </div>
