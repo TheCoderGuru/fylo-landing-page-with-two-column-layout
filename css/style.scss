@@ -1,3 +1,5 @@
+//! SASS Variables
+
 $very-dark-blue: hsl(243, 87%, 12%);
 $desaturated-blue: hsl(238, 22%, 44%);
 $bright-blue: hsl(224, 93%, 58%);
@@ -109,15 +111,6 @@ body {
   font-family: "Open Sans";
 }
 
-// .container__link::after {
-//   content: '';
-//   display: block;
-//   text-decoration: underline;
-//   position: absolute;
-//   width: 100%;
-//   border: 2px solid black;
-// }
-
 input[type="email"] {
   margin-inline: 2em;
   margin-bottom: 1.6em;
@@ -214,25 +207,25 @@ input[type="submit"] {
   }
 }
 
-.button-group{
+.button-group {
   display: flex;
   flex-direction: column;
 }
 
-.btn.btn-primary{
-   width: 100%;
+.btn.btn-primary {
+  width: 100%;
   padding-block: 1em;
   font-weight: 700;
   border: none;
-  font-size: .9em;
+  font-size: 0.9em;
   text-align: center;
   color: white;
   border-radius: 0.2em;
   background-color: $bright-blue;
 }
-.field-email{
+.field-email {
   margin-block: 1em;
-  padding: .7em;
+  padding: 0.7em;
 }
 // Footer section
 
@@ -240,13 +233,118 @@ input[type="submit"] {
   background-color: $very-dark-blue;
 
   & div img {
-    margin-block: 3em;
+    margin-block: 2em;
     margin-left: 2em;
     color: white;
   }
 }
 
 .footer-item {
-  display: flex;
-  color: $desaturated-blue;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.flex-item{
+  width: fit-content;
+  display: grid;
+  font-weight: 500;
+  color: white;
+  vertical-align: middle;
+  place-content: center;
+}
+
+.footer-links{
+    margin-inline: 2em;
+    & div > p {
+      margin-block: 2em;
+      color: white;
+    }
+}
+
+.footer-links-2{
+  margin-inline: 2em;
+  margin-block: 4em;
+
+  & p{
+    margin-block: 2em;
+    color: white;
+  }
+}
+
+
+// Desktop Version
+
+@media only screen and ( min-width: 1440px ){
+  .hero-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero{
+    order: -1;
+    position: relative;
+    display: grid;
+    place-content: center;
+
+    &__title{
+      margin-top: 3em;
+      font-family: 'Raleway';
+      width: 54%;
+      margin-left: 1em;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    &__description{
+      margin-left: 2.4em;
+      text-align: left;
+      font-family: 'Raleway';
+      color: $very-dark-blue;
+      width: 54%;
+    }
+  }
+
+  .hero__image{
+    height: 16*1.7em;
+    position: absolute;
+    right: 2em;
+  }
+
+  .hero-flex-group{
+    flex-direction: row;
+  }
+
+  input[type=submit]{
+
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+
+    &__image{
+      right: 0;
+      position: absolute;
+    }
+  }
+
+  .footer-item{
+    display: grid;
+    grid-template-columns: repeat(1fr, 22fr);
+  }
+
+  .footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-links{
+    display: grid;
+    place-items: center;
+  }
+
+  .footer-social-media{
+    display: grid;
+    place-items: center;
+  }
 }
