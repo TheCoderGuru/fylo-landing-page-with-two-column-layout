@@ -396,5 +396,23 @@ input[type="submit"] {
     display: grid;
     place-items: center;
   }
+  input[type="submit"] {
+    height: 75%;
+    margin-inline: 1em;
+  }
+  .container_title {
+    text-align: left;
+    margin-top: 9em;
+  }
+  .container__description {
+    text-align: left;
+  }
+  .access-container {
+    display: -ms-grid;
+    display: grid;
+    background-color: red;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 /*# sourceMappingURL=style.css.map */
