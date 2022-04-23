@@ -340,8 +340,17 @@ input[type="submit"] {
   }
 
   .footer-social-media{
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    margin-top: 7em;
+  }
+
+  .footer-social-media ion-icon{
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: .5em;
   }
 
   input[type="submit"]{
@@ -349,18 +358,17 @@ input[type="submit"] {
     margin-inline: 1em;
   }
 
-  .container_title{
-    text-align: left;
-    margin-top: 9em;
-  }
+  // .container_title{
+  //   text-align: left;
+  //   margin-top: 9em;
+  // }
 
-  .container__description{
-    text-align: left;
-  }
+  // .container__description{
+  //   text-align: left;
+  // }
 
   .access-container{
     display: grid;
-    background-color: red;
     grid-template-columns: repeat(2, 1fr);
   }
 }
