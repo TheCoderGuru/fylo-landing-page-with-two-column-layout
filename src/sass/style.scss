@@ -315,6 +315,27 @@ body {
       right: 0;
       top: 0;
     }
+
+    &__title{
+      text-align: left;
+      margin-inline-start: 1em;
+      margin-inline-end: 16em;
+    }
+
+    &__description{
+      text-align: left;
+      margin-inline-end: 23em;
+      margin-inline-start: 3.3em;
+    }
+
+    &__flex{
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__flex__submit{
+      margin-block-start: 2em;
+    }
   }
 
   .access-container{
