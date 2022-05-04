@@ -136,6 +136,7 @@ body {
 .quote {
   margin-inline-start: 4em;
   margin-block-start: 3em;
+  font-size: 1rem;
   font-family: "Raleway", sans-serif;
   color: hsl(243deg, 87%, 12%);
 }
@@ -161,6 +162,12 @@ body {
   margin-block-start: 1.5em;
   width: auto;
 }
+.quote__description {
+  margin-block-start: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  line-height: 1.7rem;
+}
 
 .access-container {
   background-color: hsl(238deg, 22%, 44%);
@@ -180,8 +187,7 @@ body {
   color: white;
   line-height: 1.6rem;
   text-align: center;
-  padding-inline-end: 3em;
-  padding-inline-start: 3em;
+  padding-inline: 2.7em;
 }
 
 .image {
@@ -252,4 +258,109 @@ body {
   border-radius: 50%;
   padding: 0.4rem;
   margin-block-end: 4em;
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero__grid {
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+  }
+
+  .hero {
+    order: -1;
+  }
+  .hero__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .access-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .access-container__title {
+    text-align: left;
+    margin-inline-start: 1.4em;
+    font-size: 1.8em;
+  }
+  .access-container__description {
+    text-align: left;
+    width: fit-content;
+    margin-inline-end: 23em;
+    margin-block-end: 3em;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container__content {
+    order: -1;
+  }
+  .container__title {
+    text-align: left;
+    margin-inline-start: 1.9em;
+    margin-block-start: 12em;
+    font-size: 1.7rem;
+    color: hsl(243deg, 87%, 12%);
+  }
+  .container__description {
+    margin-inline-start: 3.2em;
+    margin-inline-end: 20em;
+    color: hsl(243deg, 87%, 12%);
+  }
+  .container__description__lower {
+    margin-inline-start: 3.2em;
+    margin-inline-end: 23em;
+    line-height: 1.7;
+    color: hsl(243deg, 87%, 12%);
+  }
+  .container__lower {
+    justify-content: left;
+    margin-inline-start: 3em;
+    width: 42.1%;
+    align-items: left;
+  }
+
+  .quote {
+    margin-left: 5em;
+  }
+  .quote__description {
+    margin-inline-end: 93em;
+    letter-spacing: 0.1rem;
+  }
+  .quote__flex-lower__author-name {
+    font-size: 0.9rem;
+    letter-spacing: 0.12rem;
+  }
+  .quote__flex-lower__author-position {
+    font-size: 0.7rem;
+  }
+
+  .button__group {
+    margin-block-start: 5em;
+  }
+  .button__group__email {
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    width: 70%;
+  }
+  .button__group__submit {
+    width: 20%;
+    padding: 1.3em;
+    font-size: 0.8rem;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3em;
+  }
+  .footer-social-media ion-icon {
+    margin-block-start: 7em;
+  }
+  .footer-links, .footer-links-2 {
+    margin-block-start: 7.5em;
+  }
 }

@@ -119,7 +119,7 @@ body {
   }
 }
 
-.container__image{
+.container__image {
   margin-block-start: 10em;
 }
 
@@ -155,6 +155,7 @@ body {
 .quote {
   margin-inline-start: 4em;
   margin-block-start: 3em;
+  font-size: 1rem;
   font-family: $font-sans;
   color: $very-dark-blue;
 
@@ -184,6 +185,13 @@ body {
     margin-block-start: 1.5em;
     width: auto;
   }
+
+  &__description {
+    margin-block-start: 1em;
+    font-family: $font-sans;
+    font-weight: 500;
+    line-height: 1.7rem;
+  }
 }
 
 .access-container {
@@ -205,8 +213,7 @@ body {
     color: white;
     line-height: 1.6rem;
     text-align: center;
-    padding-inline-end: 3em;
-    padding-inline-start: 3em;
+    padding-inline: 2.7em;
   }
 }
 
@@ -289,5 +296,127 @@ body {
     border-radius: 50%;
     padding: 0.4rem;
     margin-block-end: 4em;
+  }
+}
+
+// ? Desktop Version
+
+@media only screen and (min-width: 1440px) {
+  .hero__grid {
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+  }
+
+  .hero {
+    order: -1;
+
+    &__image {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .access-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__title{
+      text-align: left;
+      margin-inline-start: 1.4em;
+      font-size: 1.8em;
+    }
+
+    &__description{
+      text-align: left;
+      width: fit-content;
+      margin-inline-end: 23em;
+      margin-block-end: 3em;
+    }
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__content{
+      order: -1;
+    }
+
+    &__title{
+      text-align: left;
+      margin-inline-start: 1.9em;
+      margin-block-start: 12em;
+      font-size: 1.7rem;
+      color: $very-dark-blue;
+    }
+
+    &__description{
+      margin-inline-start: 3.2em;
+      margin-inline-end: 20em;
+      color: $very-dark-blue;
+    }
+
+    &__description__lower{
+      margin-inline-start: 3.2em;
+      margin-inline-end: 23em;
+      line-height: 1.7;
+      color: $very-dark-blue;
+    }
+
+    &__lower{
+      justify-content: left;
+      margin-inline-start: 3em;
+      width: 42.1%;
+      align-items: left;
+    }
+  }
+
+  .quote{
+    margin-left: 5em;
+
+    &__description{
+      margin-inline-end: 93em;
+      letter-spacing: .1rem;
+    }
+
+    &__flex-lower__author-name{
+      font-size: .9rem;
+      letter-spacing: .12rem
+    }
+
+    &__flex-lower__author-position{
+      font-size: .7rem;
+    }
+  }
+
+  .button__group{
+    margin-block-start: 5em;
+
+    &__email{
+      padding: .7rem;
+      border-radius: .3rem;
+      width: 70%;
+    }
+
+    &__submit{
+      width: 20%;
+      padding: 1.3em;
+      font-size: .8rem;
+    }
+  }
+
+  .footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3em;
+
+    &-social-media ion-icon{
+      margin-block-start: 7em;
+    }
+
+    &-links, &-links-2{
+      margin-block-start: 7.5em;
+    }
   }
 }
