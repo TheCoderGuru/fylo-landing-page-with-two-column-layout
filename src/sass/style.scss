@@ -6,6 +6,7 @@ $bright-blue: hsl(224, 93%, 58%);
 $moderate-cyan: hsl(170, 45%, 43%);
 $light-grayish-blue: hsl(240, 75%, 98%);
 $light-gray: hsl(0, 0%, 75%);
+$font-sans: "Raleway", sans-serif;
 
 * {
   padding: 0;
@@ -13,11 +14,12 @@ $light-gray: hsl(0, 0%, 75%);
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
-  font-family: "Raleway", sans-serif;
+  font-family: $font-sans;
 }
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -41,346 +43,251 @@ body {
   }
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
 .hero {
-  order: 1;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
   &__title {
+    font-size: 1.7rem;
     text-align: center;
     color: $very-dark-blue;
-    font-family: "Open Sans";
-    font-weight: 700;
-    margin-top: 1.7em;
-    margin-inline: 0.2em;
-  }
-  &__description {
-    text-align: center;
-    width: 73.5%;
-    margin-block: 2em;
-    line-height: 1.5;
-    margin-inline: 3em;
+    padding-inline: 1em;
+    margin-block-start: 1em;
   }
   &__image {
-    margin-top: 5em;
-    height: 16em;
+    height: 18rem;
+    width: auto;
     margin-inline: 2em;
+  }
+
+  &__description {
+    text-align: center;
+    margin-block-start: 2em;
+    line-height: 1.6;
+    color: $very-dark-blue;
+    margin-inline: 3em;
   }
 }
 
-.hero-flex-group {
+.hero__flex {
   display: flex;
-  margin-inline: 1em;
   flex-direction: column;
-}
 
-.image {
-  height: 16em;
-  margin-inline: 2em;
+  &__email {
+    padding: 1em;
+    margin-block-start: 2em;
+    margin-inline: 4em;
+    width: 76%;
+    border-radius: 0.3rem;
+    border: 1px solid $very-dark-blue;
+    font-weight: 500;
+  }
+
+  &__submit {
+    background-color: $bright-blue;
+    color: white;
+    border: none;
+    width: 76%;
+    margin-inline: 3.6em;
+    margin-block-start: 1em;
+    padding: 1em;
+    border-radius: 0.3rem;
+    font-family: $font-sans;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
 }
 
 .container__title {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   text-align: center;
-  color: $very-dark-blue;
-  margin-left: 1.9em;
+  margin-block-start: 2em;
 }
 
 .container__description {
-  margin-inline: 1.7em;
-  color: $desaturated-blue;
-  margin-block: 2em;
+  margin-inline-start: 1em;
+  margin-top: 2em;
+  padding-inline-end: 3.4em;
   line-height: 1.8;
-  width: 85%;
+  color: $desaturated-blue;
+
+  &__lower {
+    margin-inline-start: 1em;
+    margin-top: 1em;
+    color: $desaturated-blue;
+  }
 }
 
-.container__image {
-  margin-top: 12em;
-  margin-bottom: 5em;
+.container__image{
+  margin-block-start: 10em;
 }
 
-.container__link {
+.container__lower {
   text-align: center;
-  justify-content: center;
-  display: block;
-  color: $moderate-cyan;
-  position: relative;
-  font-weight: 500;
-  font-family: "Open Sans";
-}
-
-input[type="email"] {
-  margin-inline: 2em;
-  margin-bottom: 1.6em;
-  width: 80%;
-  border: 1px solid $desaturated-blue;
-  border-radius: 0.2em;
-  padding-block: 1em;
-}
-
-.hero-flex-group input:nth-child(1)::placeholder {
-  color: black;
-  font-weight: 500;
-  margin-left: 2em;
-}
-
-input[type="submit"] {
-  width: 80%;
-  margin-inline: 2em;
-  padding-block: 1em;
-  font-weight: 700;
-  border: none;
-  color: white;
-  border-radius: 0.2em;
-  background-color: $bright-blue;
-}
-
-// Quote section
-
-.flex {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  gap: 0.3em;
+  margin-block-start: 2em;
 
-  & img {
-    margin-left: 0.4em;
+  &__link {
+    color: $moderate-cyan;
   }
-  & ::after {
+
+  &__icon {
+    object-fit: contain;
+    top: 0.1em;
+  }
+
+  &__link::after {
     content: "";
     display: block;
     margin-top: 0.4em;
     text-decoration: underline;
     position: absolute;
-    width: 100%;
+    width: 41%;
     border: 1px solid $moderate-cyan;
   }
 }
 
 .quote {
-  margin-inline: 4em;
-  margin-block: 4em;
-}
-.quote p {
-  width: 85%;
-  margin-top: 0.7em;
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.8;
-  font-size: 0.9rem;
-}
+  margin-inline-start: 4em;
+  margin-block-start: 3em;
+  font-family: $font-sans;
+  color: $very-dark-blue;
 
-.flex-author {
-  display: flex;
-}
-
-.flex-author img {
-  margin-top: 1em;
-  clip-path: circle(50%);
-  height: 2.5em;
-  width: auto;
-}
-
-.flex-lower {
-  margin-left: 1em;
-
-  & p:first-of-type {
-    font-weight: bold;
-    font-family: "Raleway";
-  }
-
-  & p:nth-child(2) {
-    font-size: 0.2rem;
-  }
-}
-
-// Get early access section
-
-.access-container {
-  margin-top: 6em;
-  &__title {
-    display: inline-block;
-    font-size: 1.3em;
-    text-align: center;
-    // margin-inline: 2em;
-  }
-}
-
-.button-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.btn.btn-primary {
-  width: 100%;
-  padding-block: 1em;
-  font-weight: 700;
-  border: none;
-  font-size: 0.9em;
-  text-align: center;
-  color: white;
-  border-radius: 0.2em;
-  background-color: $bright-blue;
-}
-.field-email {
-  margin-block: 1em;
-  padding: 0.7em;
-}
-// Footer section
-
-.footer-container {
-  background-color: $very-dark-blue;
-
-  & div img {
-    margin-block: 2em;
-    margin-left: 2em;
-    color: white;
-  }
-}
-
-.footer-item {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-}
-
-.flex-item {
-  width: fit-content;
-  display: grid;
-  font-weight: 500;
-  color: white;
-  vertical-align: middle;
-  place-content: center;
-}
-
-.footer-links {
-  margin-inline: 2em;
-  & div > p {
-    margin-block: 2em;
-    color: white;
-  }
-}
-
-.footer-links-2 {
-  margin-inline: 2em;
-  margin-block: 4em;
-
-  & p {
-    margin-block: 2em;
-    color: white;
-  }
-}
-
-.footer-social-media {
-  text-align: center;
-  color: white;
-  grid-template-columns: repeat(3, 0.5fr);
-
-  & ion-icon {
-    border-radius: 50%;
-    border: 1px solid;
-    padding: 0.5em;
-    margin-right: 1rem;
-  }
-}
-
-// Desktop Version
-
-@media only screen and (min-width: 1440px) {
-  .hero-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero {
-    order: -1;
-    position: relative;
-    display: grid;
-    place-content: center;
-
-    &__title {
-      margin-top: 3em;
-      font-family: "Raleway";
-      width: 54%;
-      margin-left: 1em;
-      line-height: 1.5;
-      text-align: left;
-    }
-
-    &__description {
-      margin-left: 2.4em;
-      text-align: left;
-      font-family: "Raleway";
-      color: $very-dark-blue;
-      width: 54%;
-    }
-  }
-
-  .hero__image {
-    height: 16 * 1.7em;
-    position: absolute;
-    right: 2em;
-  }
-
-  .hero-flex-group {
-    flex-direction: row;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    position: relative;
-
-    &__image {
-      right: 0;
-      position: absolute;
-    }
-  }
-
-  .footer-item {
-    display: grid;
-    grid-template-columns: repeat(1fr, 22fr);
-  }
-
-  .footer-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .footer-links {
-    display: grid;
-    place-items: center;
-  }
-
-  .footer-social-media {
+  &__flex-author {
     display: flex;
     flex-direction: row;
-    gap: 2em;
-    margin-top: 7em;
+    gap: 0.7em;
   }
 
-  .footer-social-media ion-icon {
-    color: white;
-    border: 1px solid white;
+  &__flex-lower__author-name {
+    font-weight: bold;
+    color: $very-dark-blue;
+    letter-spacing: 0.11em;
+  }
+
+  &__flex-lower__author-position {
+    font-size: 0.7rem;
+  }
+
+  &__flex-lower {
+    margin-block-start: 1.5em;
+  }
+
+  &__flex-author__avatar {
     border-radius: 50%;
-    padding: 0.5em;
+    height: 2rem;
+    margin-block-start: 1.5em;
+    width: auto;
+  }
+}
+
+.access-container {
+  background-color: $desaturated-blue;
+  margin-block-start: 5em;
+  padding: 1em;
+  text-align: center;
+  justify-content: center;
+
+  &__title {
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-block-start: 2em;
+    margin-block-end: 1em;
   }
 
-  input[type="submit"] {
-    height: 75%;
-    margin-inline: 1em;
+  &__description {
+    color: white;
+    line-height: 1.6rem;
+    text-align: center;
+    padding-inline-end: 3em;
+    padding-inline-start: 3em;
+  }
+}
+
+// ! Utility Classes
+
+.image {
+  height: 18rem;
+  width: auto;
+  margin-inline: 2em;
+}
+
+.button__group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  margin-inline: 3em;
+
+  &__email {
+    padding: 0.6em;
   }
 
-  // .container_title{
-  //   text-align: left;
-  //   margin-top: 9em;
-  // }
+  &__email::placeholder {
+    text-align: left;
+  }
 
-  // .container__description{
-  //   text-align: left;
-  // }
+  &__submit {
+    background-color: $bright-blue;
+    color: white;
+    border: none;
+    margin-block-start: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 0.3rem;
+    font-family: $font-sans;
+    font-weight: bold;
+    font-size: 0.7em;
+    margin-block-end: 4em;
+  }
+}
 
-  .access-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.footer {
+  background-color: $very-dark-blue;
+  &__logo {
+    margin-top: 2em;
+    margin-inline-start: 2em;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 1em;
+    margin-inline-start: 2em;
+    margin-block-start: 2em;
+  }
+
+  &-links,
+  &-links-2 {
+    color: white;
+    margin-block-start: 2em;
+    margin-inline-start: 2em;
+  }
+
+  &-links p,
+  &-links-2 p {
+    margin-block-end: 1.5em;
+  }
+
+  &-social-media {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-social-media ion-icon {
+    margin-inline-end: 2em;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    padding: 0.4rem;
+    margin-block-end: 4em;
   }
 }
