@@ -52,12 +52,11 @@ Users should be able to:
 
 ### What I learned
 
-I learnt a lot about structuring content on a two-column layout specifically structuring your code as per the design of the mobile version and then make the necessary adjustments in the desktop version.
-
+I learnt that the best way to approach a challenge is to use the convention mobile first, as this takes away the complexity and allows for the desktop version to be easily adjusted. Secondly it is useful to visualize the design itself in components for example the navigation bar is called the navbar component which can include the website logo etc. Thirdly the usage of grid versus flexbox depends on the alignment of the content that you would like to achieve, this means that grid should only be used if content needs to be aligned on both the x and y axes.
 
 ### Continued development
 
-I am unsure about the usage of the ```order``` property when using css flexbox hence I plan to do some more research and practice using css flexbox in my future solutions.
+I am unsure about the usage of the ```order``` property when using css flexbox hence I plan to do some more research on css flex and practice using css flexbox in my future solutions while taking into consideration the important points noted above.
 
 ### Useful resources
 
