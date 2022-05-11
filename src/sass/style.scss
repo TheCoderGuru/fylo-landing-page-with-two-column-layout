@@ -30,16 +30,16 @@ body {
   &__navlinks {
     margin-top: 2em;
     list-style: none;
+    right: 2em;
     display: flex;
     gap: 2em;
-    margin-right: 1em;
   }
   &__logo {
     width: auto;
-    height: 1.6rem;
+    height: 2rem;
     display: inline-block;
-    margin-top: 2em;
-    margin-left: 1.6em;
+    margin-top: 3em;
+    margin-left: 3em;
   }
 }
 
@@ -53,17 +53,16 @@ body {
     text-align: center;
     color: $very-dark-blue;
     padding-inline: 1em;
-    margin-block-start: 1em;
+    margin-block-start: 2em;
   }
   &__image {
     height: 18rem;
     width: auto;
-    margin-inline: 2em;
   }
 
   &__description {
     text-align: center;
-    margin-block-start: 2em;
+    margin-block-start: 1em;
     line-height: 1.6;
     color: $very-dark-blue;
     margin-inline: 3em;
@@ -73,13 +72,14 @@ body {
 .hero__flex {
   display: flex;
   flex-direction: column;
+  gap: 1em;
 
   &__email {
     padding: 1em;
     margin-block-start: 2em;
-    margin-inline: 4em;
-    width: 76%;
-    border-radius: 0.3rem;
+    margin-inline-start: 4em;
+    width: 36%;
+    border-radius: 0.2rem;
     border: 1px solid $very-dark-blue;
     font-weight: 500;
   }
@@ -88,11 +88,10 @@ body {
     background-color: $bright-blue;
     color: white;
     border: none;
-    width: 76%;
-    margin-inline: 3.6em;
+    width: 18%;
     margin-block-start: 1em;
     padding: 1em;
-    border-radius: 0.3rem;
+    border-radius: 0.2rem;
     font-family: $font-sans;
     font-weight: bold;
     font-size: 0.9em;
@@ -120,7 +119,7 @@ body {
 }
 
 .container__image {
-  margin-block-start: 10em;
+  margin-block-start: 23em;
 }
 
 .container__lower {
@@ -302,6 +301,12 @@ body {
 // ? Desktop Version
 
 @media only screen and (min-width: 1440px) {
+
+  .navbar__navlinks{
+    position: absolute;
+    right: 4em;
+
+  }
   .hero__grid {
     grid-template-columns: repeat(2, 1fr);
     position: relative;
@@ -318,8 +323,10 @@ body {
 
     &__title{
       text-align: left;
-      margin-inline-start: 1em;
-      margin-inline-end: 16em;
+      margin-inline-start: .6em;
+      padding-inline-end: 6em;
+      line-height: 1.6em;
+      font-size: 2em;
     }
 
     &__description{
@@ -351,7 +358,7 @@ body {
     &__description{
       text-align: left;
       width: fit-content;
-      margin-inline-end: 23em;
+      padding-inline-end: 14em;
       margin-block-end: 3em;
     }
   }
@@ -397,7 +404,7 @@ body {
     margin-left: 5em;
 
     &__description{
-      margin-inline-end: 93em;
+      padding-inline-end: 55em;
       letter-spacing: .1rem;
     }
 
@@ -421,7 +428,7 @@ body {
     }
 
     &__submit{
-      width: 20%;
+      width: 26%;
       padding: 1.3em;
       font-size: .8rem;
     }

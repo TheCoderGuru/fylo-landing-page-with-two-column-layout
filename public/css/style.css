@@ -21,16 +21,16 @@ body {
 .navbar__navlinks {
   margin-top: 2em;
   list-style: none;
+  right: 2em;
   display: flex;
   gap: 2em;
-  margin-right: 1em;
 }
 .navbar__logo {
   width: auto;
-  height: 1.6rem;
+  height: 2rem;
   display: inline-block;
-  margin-top: 2em;
-  margin-left: 1.6em;
+  margin-top: 3em;
+  margin-left: 3em;
 }
 
 .hero__grid {
@@ -42,16 +42,15 @@ body {
   text-align: center;
   color: hsl(243deg, 87%, 12%);
   padding-inline: 1em;
-  margin-block-start: 1em;
+  margin-block-start: 2em;
 }
 .hero__image {
   height: 18rem;
   width: auto;
-  margin-inline: 2em;
 }
 .hero__description {
   text-align: center;
-  margin-block-start: 2em;
+  margin-block-start: 1em;
   line-height: 1.6;
   color: hsl(243deg, 87%, 12%);
   margin-inline: 3em;
@@ -60,13 +59,14 @@ body {
 .hero__flex {
   display: flex;
   flex-direction: column;
+  gap: 1em;
 }
 .hero__flex__email {
   padding: 1em;
   margin-block-start: 2em;
-  margin-inline: 4em;
-  width: 76%;
-  border-radius: 0.3rem;
+  margin-inline-start: 4em;
+  width: 36%;
+  border-radius: 0.2rem;
   border: 1px solid hsl(243deg, 87%, 12%);
   font-weight: 500;
 }
@@ -74,11 +74,10 @@ body {
   background-color: hsl(224deg, 93%, 58%);
   color: white;
   border: none;
-  width: 76%;
-  margin-inline: 3.6em;
+  width: 18%;
   margin-block-start: 1em;
   padding: 1em;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 0.9em;
@@ -104,7 +103,7 @@ body {
 }
 
 .container__image {
-  margin-block-start: 10em;
+  margin-block-start: 23em;
 }
 
 .container__lower {
@@ -261,6 +260,11 @@ body {
 }
 
 @media only screen and (min-width: 1440px) {
+  .navbar__navlinks {
+    position: absolute;
+    right: 4em;
+  }
+
   .hero__grid {
     grid-template-columns: repeat(2, 1fr);
     position: relative;
@@ -276,8 +280,10 @@ body {
   }
   .hero__title {
     text-align: left;
-    margin-inline-start: 1em;
-    margin-inline-end: 16em;
+    margin-inline-start: 0.6em;
+    padding-inline-end: 6em;
+    line-height: 1.6em;
+    font-size: 2em;
   }
   .hero__description {
     text-align: left;
@@ -304,7 +310,7 @@ body {
   .access-container__description {
     text-align: left;
     width: fit-content;
-    margin-inline-end: 23em;
+    padding-inline-end: 14em;
     margin-block-end: 3em;
   }
 
@@ -344,7 +350,7 @@ body {
     margin-left: 5em;
   }
   .quote__description {
-    margin-inline-end: 93em;
+    padding-inline-end: 55em;
     letter-spacing: 0.1rem;
   }
   .quote__flex-lower__author-name {
@@ -364,7 +370,7 @@ body {
     width: 70%;
   }
   .button__group__submit {
-    width: 20%;
+    width: 26%;
     padding: 1.3em;
     font-size: 0.8rem;
   }
